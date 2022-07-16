@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add a Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1590&q=80');
+        }
+
+        .container {
+            width: 300px;
+            margin-top: 10%;
+           
+        }
+    </style>
+</head>
+
+<body>
+    
+    <center>
+        <div class="container">
+            <h1 style="color: white;"">Add Book</h1>
+            <form action="/book" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="title" placeholder="Plese Enter Book Title"
+                        required="true">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="author" placeholder="Plese Enter Author Name"
+                        required="true">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="chapters[]" placeholder="Chapters" required="true">
+                </div>
+                <div class="mb-3">
+                    <input type="number" class="form-control" name="price" placeholder="Plese Enter Book Price"
+                        required="true">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" name="coupon" placeholder="Plese Apply Coupon">
+                </div>
+                <div class="mb-3">
+                    <input type="file" class="form-control" name="image" aria-describedby="Upload Book Cover"
+                        required="true">
+                </div>
+                <div class="mb-3">
+                    <input type="date" class="form-control" name="date" placeholder="Plese Enter Date" required="true">
+                </div>
+                <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                <a href="/logout" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Logout</a>
+            </form>
+        </div>
+    </center>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
