@@ -31,13 +31,6 @@ router.put("/book/:bookId", authorization, updateBookById);
 router.delete("/book/:bookId", authorization, deleteBookById);
 
 
-//Product Api's
-
-//Cart Api's
-
-//Order Api's
-
-
 // if api is invalid OR wrong URL
 router.all("/*", function (req, res) {
   res.status(404).send({ status: false, msg: "The api you requested is not available" });
